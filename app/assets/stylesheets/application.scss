@@ -1,0 +1,64 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require material_icons
+ *= require material_icons.helpers
+ *= require material_icons.outlined
+ */
+ 
+@import 'bootstrap';
+@import './themes/colors';
+@import './themes/fonts';
+
+* {
+  font-family: 'Proxima-Light';
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: $bg-color;
+}
+
+.text-1 {
+  color: $theme-text-1;
+}
+.text-2{
+  color: $theme-text-2;
+}
+.text-3 {
+  color: $theme-text-3;
+}
+.text-4 {
+  color: $theme-text-4;
+}
+
+header h2 {
+  letter-spacing: 0.05rem;
+  font-family: 'Proxima-Light';
+  font-size: 1.25rem;
+}
+
+header input[type="submit"] {
+  font-family: 'Proxima-Light', serif;
+  letter-spacing: 0.1rem;
+  font-size: 1.25rem;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}

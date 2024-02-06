@@ -1,0 +1,38 @@
+@import '../themes/colors';
+
+.form-wrapper {
+  box-shadow: 0 2px 0 0 $theme-text-5, 0 -2px 0 0 $theme-text-5;
+}
+
+.input-group {
+  border-bottom: 1px solid $theme-text-5;
+  margin-left: 2rem;
+}
+
+.input-group:last-child {
+  border-bottom: none;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"],
+.input-group input[type="email"] {
+  outline: none;
+  border: none;
+  color: $theme-text-2;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  width: 85%;
+}
+
+.photo-upload input[type="text"] {
+  width: 70%;
+}
+
+.input-group input::placeholder {
+  color: $theme-text-4;
+}
+
+.error_explanation h2 {
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+}
