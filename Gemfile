@@ -47,6 +47,7 @@ gem "bootsnap", require: false
 gem 'bootstrap'
 gem 'cancancan'
 gem 'devise'
+gem 'dotenv-rails'
 gem 'jquery-rails'
 gem 'pry'
 gem 'sassc-rails'
