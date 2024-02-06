@@ -49,6 +49,7 @@ gem 'cancancan'
 gem 'devise'
 gem 'dotenv-rails'
 gem 'jquery-rails'
+gem 'material_icons'
 gem 'pry'
 gem 'sassc-rails'
 
