@@ -16,7 +16,8 @@
  *= require material_icons.helpers
  *= require material_icons.outlined
  */
- 
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+
 @import 'bootstrap';
 @import './themes/colors';
 @import './themes/fonts';
@@ -61,4 +62,36 @@ header input[type="submit"] {
 
 .text-decoration-none {
   text-decoration: none;
+}
+
+.bg-splash-screen {
+  background-color: $splash-bg;
+  height: 100vh;
+  width: 100vw;
+}
+
+.splash-title {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-title p {
+  font-family: 'Protest Revolution', sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+.splash-buttons .btn {
+  width: 93%;
+  margin: auto;
+}
+
+.splash-buttons .btn:first-child {
+  color: white;
+}
+
+.splash-buttons .btn:first-child:hover {
+  color: black;
 }
