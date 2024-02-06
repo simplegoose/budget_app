@@ -1,0 +1,33 @@
+<header class="row bg-main px-3 py-2">
+  <div class="col-3 p-0 d-flex align-items-center justify-content-start">
+    <%= link_to :back do %>
+      <%= material_icon.shape(:arrow_back).outlined.md_36.css_class('text-white') %>
+    <% end %>
+  </div>
+  <div class="col-6 p-0 d-flex align-items-center justify-content-center">
+    <%- if controller_name == 'registrations' && controller.action_name == 'new' %>
+      <h2 class="text-center m-0 text-white">Register</h2>
+    <% elsif controller_name == 'sessions' %>
+      <h2 class="text-center m-0 text-white">Log In</h2>
+    <% elsif controller_name == 'registrations' && controller.action_name == 'edit' %>
+      <h2 class="text-center m-0 text-white">Update</h2>
+    <% elsif controller_name == 'passwords' && controller.action_name == 'new' %>
+      <h2 class="text-center m-0 text-white">Reset Password</h2>
+    <% elsif controller_name == 'passwords' && controller.action_name == 'edit' %>
+      <h2 class="text-center m-0 text-white">Update Password</h2>
+    <% end %>
+  </div>
+  <div class="col-3 p-0 d-flex align-items-center justify-content-end">
+    <%- if controller_name == 'registrations' && controller.action_name == 'new' %>
+      <%= form.submit 'Log In', class: 'border-none bg-main text-white btn rounded-0' %>
+    <% elsif controller_name == 'sessions' %>
+      <%= form.submit 'Next', class: 'border-none bg-main text-white btn rounded-0' %>
+    <% elsif controller_name == 'registrations' && controller.action_name == 'edit' %>
+       <%= form.submit 'Save', class: 'border-none bg-main text-white btn rounded-0' %>
+    <% elsif controller_name == 'passwords' && controller.action_name == 'new' %>
+      <%= form.submit 'Reset', class: 'border-none bg-main text-white btn rounded-0' %>
+    <% elsif controller_name == 'passwords' && controller.action_name == 'edit' %>
+      <%= form.submit 'Update', class: 'border-none bg-main text-white btn rounded-0' %>
+    <% end %>
+  </div>
+</header>
