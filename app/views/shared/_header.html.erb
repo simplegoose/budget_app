@@ -1,0 +1,23 @@
+<header class="row bg-main px-3 py-2">
+  <div class="col-3 p-0 d-flex align-items-center justify-content-start">
+    <%- if controller_name == 'categories' && controller.action_name == 'show' %>
+      <%= link_to categories_path do %>
+        <%= material_icon.shape(:arrow_back).outlined.md_36.css_class('text-white px-2') %>
+      <% end %>
+    <% else controller_name == 'entities' %>
+      <%= link_to :back, class: " d-flex align-items-center justify-content-start" do %>
+        <%= material_icon.shape(:menu).outlined.md_36.css_class('text-white px-2') %>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="col-6 p-0 d-flex align-items-center justify-content-center">
+    <%- if controller_name == 'categories' && controller.action_name != 'show' %>
+      <h2 class="text-center m-0 text-white">Categories</h2>
+    <% elsif controller_name == 'categories' %>
+      <h2 class="text-center m-0 text-white">Transactions</h2>
+    <% end %>
+  </div>
+  <div class="col-3 p-0 d-flex align-items-center justify-content-end">
+    <%= material_icon.shape(:search).outlined.md_36.css_class('text-white px-2') %>
+  </div>
+</header>

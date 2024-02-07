@@ -1,0 +1,23 @@
+<header class="row bg-main px-3 py-2">
+  <div class="col-3 p-0 d-flex align-items-center justify-content-start">
+    <%- if controller_name == 'categories' %>
+      <%= link_to categories_path do %>
+        <%= material_icon.shape(:arrow_back).outlined.md_36.css_class('text-white') %>
+      <% end %>
+    <% elsif controller_name == 'entities' %>
+      <%= link_to category_path(category) do %>
+        <%= material_icon.shape(:arrow_back).outlined.md_36.css_class('text-white') %>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="col-6 p-0 d-flex align-items-center justify-content-center">
+    <%- if controller_name == 'categories' %>
+      <h2 class="text-center m-0 text-white">New Category</h2>
+    <% elsif controller_name == 'entities' %>
+      <h2 class="text-center m-0 text-white">New Transaction</h2>
+    <% end %>
+  </div>
+  <div class="col-3 p-0 d-flex align-items-center justify-content-end">
+    <%= form.submit 'Save', class: 'border-none bg-main text-white btn rounded-0' %>
+  </div>
+</header>
