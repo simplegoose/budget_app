@@ -17,7 +17,6 @@
  *= require material_icons.outlined
  */
 @import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
-
 @import 'bootstrap';
 @import './themes/colors';
 @import './themes/fonts';
@@ -38,12 +37,15 @@ body {
 .text-1 {
   color: $theme-text-1;
 }
-.text-2{
+
+.text-2 {
   color: $theme-text-2;
 }
+
 .text-3 {
   color: $theme-text-3;
 }
+
 .text-4 {
   color: $theme-text-4;
 }
@@ -115,9 +117,8 @@ header input[type="submit"] {
   overflow-y: scroll;
 }
 
-
 .icon-text span:nth-child(2) {
-  font-family: cursive;
+  font-family: 'Times New Roman', serif;
 }
 
 .shadow-bottom {
