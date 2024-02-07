@@ -1,0 +1,32 @@
+<main id="categories">
+  <%= render "shared/header" %>
+  <div class="card m-2 rounded-0" id="<%= dom_id @category %>">
+
+    <div class="mx-2 py-3 row shadow-bottom">
+      <div class="icon col-3 px-0">
+        <%= image_tag @category.icon, :class => 'img-fluid' %>
+      </div>
+
+      <div class="icon-text col-9 d-flex justify-content-start align-items-center py-1 pb-0 text-4">
+        <span class="text-4"><%= @category.name %></span>
+      </div>
+    </div>
+
+    <div class="transactions-wrapper">
+      <% @category.entities.each do |transaction| %>
+        <%= render "transaction", transaction: transaction %>
+      <% end %>
+    </div>
+
+    <div class="icon-text d-flex justify-content-between py-3 px-3 text-4">
+      <span class="text-4">TOTAL PAYMENT</span>
+      <span class="text-2" style="font-family: cursive; font-weight: 400;">&dollar;<%= @totals %></span>
+    </div>
+
+  </div>
+
+</main>
+
+<div class="splash-buttons">
+  <%= link_to "New Transaction", new_category_entity_path(@category), class: 'btn bg-main rounded-0 m-auto d-block' %>
+</div>
