@@ -1,0 +1,17 @@
+<%= form_with(model: entity, url: category_entities_path(params[:category_id])) do |form| %>
+  <%= render "shared/forms/header", form: form, category: category %>
+  <%= render "shared/forms/error_messages", resource: entity %>
+
+  <div class="form-wrapper bg-white my-3">
+
+    <div class="input-group py-2">
+      <%= form.text_field :name, placeholder: 'Transaction Name' %>
+    </div>
+
+    <div class="input-group py-2">
+      <%= form.number_field :amount, placeholder: 'Amount' %>
+    </div>
+
+  </div>
+
+<% end %>
