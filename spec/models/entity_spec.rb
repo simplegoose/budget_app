@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Entity, type: :model do
   let(:user) { create(:user) }
-  let(:category) { create(:category, user: user) }
-  let(:entity) { create(:entity, author: user, category: category) }
+  let(:category) { create(:category, user:) }
+  let(:entity) { create(:entity, author: user, category:) }
 
   it 'is valid with valid attributes' do
     expect(entity).to be_valid

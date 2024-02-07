@@ -12,66 +12,63 @@ require 'rails_helper'
 # of tools you can use to make these specs even more expressive, but we're
 # sticking to rails and rspec-rails APIs to keep things simple and stable.
 
-RSpec.describe "/entities", type: :request do
-  
+RSpec.describe '/entities', type: :request do
   # This should return the minimal set of attributes required to create a valid
   # Entity. As you add validations to Entity, be sure to
   # adjust the attributes here as well.
   let(:user) { create(:user) }
-  let(:category) { create(:category, user: user) }
-  let(:valid_attributes) {
+  let(:category) { create(:category, user:) }
+  let(:valid_attributes) do
     {
-      :name => 'string',
-      :amount => 0
+      name: 'string',
+      amount: 0
     }
-  }
+  end
 
-  let(:invalid_attributes) {
+  let(:invalid_attributes) do
     {
-      :name => nil,
-      :amount => nil
+      name: nil,
+      amount: nil
     }
-  }
+  end
 
   before do
     sign_in user
   end
 
-  describe "GET /new" do
-    it "renders a successful response" do
+  describe 'GET /new' do
+    it 'renders a successful response' do
       get new_category_entity_path(category)
       expect(response).to render_template(:new)
     end
   end
 
-  describe "POST /create" do
-    context "with valid parameters" do
-      it "creates a new Entity" do
-        expect {
+  describe 'POST /create' do
+    context 'with valid parameters' do
+      it 'creates a new Entity' do
+        expect do
           post category_entities_path(category), params: { entity: valid_attributes }
-        }.to change(Entity, :count).by(1)
+        end.to change(Entity, :count).by(1)
       end
 
-      it "redirects to the created entity" do
+      it 'redirects to the created entity' do
         post category_entities_path(category), params: { entity: valid_attributes }
         expect(response).to redirect_to(category_path(category))
       end
     end
 
-    context "with invalid parameters" do
-      it "does not create a new Entity" do
-        expect {
+    context 'with invalid parameters' do
+      it 'does not create a new Entity' do
+        expect do
           post category_entities_path(category), params: { entity: invalid_attributes }
-        }.to change(Entity, :count).by(0)
+        end.to change(Entity, :count).by(0)
       end
 
-    
+
       it "renders a response with 422 status (i.e. to display the 'new' template)" do
         post category_entities_path(category), params: { entity: invalid_attributes }
         expect(response).to have_http_status(:unprocessable_entity)
       end
-    
     end
   end
-
 end

@@ -1,5 +1,5 @@
 class EntitiesController < ApplicationController
-  before_action :set_category, only: %i[ new create ]
+  before_action :set_category, only: %i[new create]
 
   # GET /entities/new
   def new
@@ -15,7 +15,7 @@ class EntitiesController < ApplicationController
 
     respond_to do |format|
       if @entity.save
-        format.html { redirect_to category_url(@category), notice: "Entity was successfully created." }
+        format.html { redirect_to category_url(@category), notice: 'Entity was successfully created.' }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @entity.errors, status: :unprocessable_entity }
@@ -24,13 +24,14 @@ class EntitiesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_category
-      @category = Category.find(params[:category_id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def entity_params
-      params.require(:entity).permit(:name, :amount)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_category
+    @category = Category.find(params[:category_id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def entity_params
+    params.require(:entity).permit(:name, :amount)
+  end
 end
