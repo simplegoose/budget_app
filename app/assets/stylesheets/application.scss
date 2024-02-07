@@ -23,7 +23,7 @@
 @import './themes/fonts';
 
 * {
-  font-family: 'Proxima-Light';
+  font-family: 'Proxima-Light', cursive;
   font-weight: bold;
   margin: 0;
   padding: 0;
@@ -94,4 +94,32 @@ header input[type="submit"] {
 
 .splash-buttons .btn:first-child:hover {
   color: black;
+}
+
+.icon-text {
+  font-size: 0.9rem;
+}
+
+#categories a {
+  text-decoration: none;
+}
+
+.categories-wrapper {
+  max-height: 83vh;
+  height: 83vh;
+  overflow-y: scroll;
+}
+
+.transactions-wrapper {
+  max-height: 60vh;
+  overflow-y: scroll;
+}
+
+
+.icon-text span:nth-child(2) {
+  font-family: cursive;
+}
+
+.shadow-bottom {
+  border-bottom: 1px solid $theme-text-5;
 }
