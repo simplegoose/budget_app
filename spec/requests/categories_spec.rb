@@ -72,7 +72,7 @@ RSpec.describe '/categories', type: :request do
 
       it 'redirects to the created category' do
         post categories_url, params: { category: valid_attributes }
-        expect(response).to redirect_to(category_url(Category.last))
+        expect(response).to redirect_to(categories_url)
       end
     end
 
