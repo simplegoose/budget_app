@@ -19,9 +19,9 @@
   </div>
   <div class="col-3 p-0 d-flex align-items-center justify-content-end">
     <%- if controller_name == 'registrations' && controller.action_name == 'new' %>
-      <%= form.submit 'Log In', class: 'border-none bg-main text-white btn rounded-0' %>
-    <% elsif controller_name == 'sessions' %>
       <%= form.submit 'Next', class: 'border-none bg-main text-white btn rounded-0' %>
+    <% elsif controller_name == 'sessions' %>
+      <%= form.submit 'Log In', class: 'border-none bg-main text-white btn rounded-0' %>
     <% elsif controller_name == 'registrations' && controller.action_name == 'edit' %>
        <%= form.submit 'Save', class: 'border-none bg-main text-white btn rounded-0' %>
     <% elsif controller_name == 'passwords' && controller.action_name == 'new' %>
