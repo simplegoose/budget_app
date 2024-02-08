@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
   # GET /categories or /categories.json
   def index
     user_id = current_user.id
-    @categories = Category.includes(:entities).where(user_id:)
+    @categories = Category.includes(:entities).where(user_id:).order('categories.created_at DESC')
   end
 
   # GET /categories/1 or /categories/1.json
@@ -36,7 +36,7 @@ class CategoriesController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_category
-    @category = Category.includes(:entities).find(params[:id])
+    @category = Category.includes(:entities).order('entities.created_at DESC').find(params[:id])
     @totals = helpers.get_transaction_total(@category.entities)
   end
 
