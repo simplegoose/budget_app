@@ -52,7 +52,7 @@ body {
 
 header h2 {
   letter-spacing: 0.05rem;
-  font-family: 'Proxima-Light';
+  font-family: 'Proxima-Light', cursive;
   font-size: 1.25rem;
 }
 
@@ -117,8 +117,18 @@ header input[type="submit"] {
   overflow-y: scroll;
 }
 
+.categories-wrapper .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categories-wrapper .icon img {
+  max-height: 70px;
+}
+
 .icon-text span:nth-child(2) {
-  font-family: 'Times New Roman', serif;
+  font-family: cursive;
 }
 
 .shadow-bottom {
