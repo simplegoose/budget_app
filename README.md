@@ -189,7 +189,9 @@ If you like this project coomment or send it a star
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for suggesting the app
+I would like to thank Microverse for suggesting the app.
+
+I would like to thank [gregoirevella](https://www.behance.net/gregoirevella) for the design inspiration.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
