@@ -4,6 +4,7 @@ class CategoriesController < ApplicationController
   # GET /categories or /categories.json
   def index
     user_id = current_user.id
+    @user = current_user
     @categories = Category.includes(:entities).where(user_id:).order('categories.created_at DESC')
   end
 

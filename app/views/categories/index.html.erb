@@ -1,5 +1,7 @@
 <main id="categories">
   <%= render "shared/header" %>
+  <%= render "shared/menu" %>
+
   <div class="categories-wrapper mt-3">
     <% @categories.each do |category| %>
       <%= link_to category do %>

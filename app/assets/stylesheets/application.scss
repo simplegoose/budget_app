@@ -123,6 +123,23 @@ header input[type="submit"] {
   justify-content: center;
 }
 
+.avatar-wrapper {
+  width: 150px;
+  height: 150px;
+}
+
+.avatar-wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.user span,
+.menus span {
+  font-weight: 100;
+  letter-spacing: 0.05rem;
+}
+
 .categories-wrapper .icon img {
   max-height: 70px;
 }
@@ -133,4 +150,25 @@ header input[type="submit"] {
 
 .shadow-bottom {
   border-bottom: 1px solid $theme-text-5;
+}
+
+.navigation {
+  position: fixed;
+  width: 75vw;
+  height: 100vh;
+  top: 0;
+  left: -75vw;
+  background: linear-gradient(45deg, $gradient-1, $gradient-2);
+  z-index: 1;
+}
+
+.navigation.show {
+  left: 0;
+}
+
+body.hide {
+  left: 75vw;
+  position: fixed;
+  top: 0;
+  width: 100vw;
 }
