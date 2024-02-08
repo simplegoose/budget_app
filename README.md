@@ -110,7 +110,7 @@ install Rails
 Clone this repository to your desired folder:
 
 ```sh
-gh git clone https://github.com/simplegoose/budget_app.git
+git clone https://github.com/simplegoose/budget_app.git
 ```
 --->
 
@@ -162,7 +162,7 @@ Example command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Comming Soon]**
+- [ ] **[Navigation Menu]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
