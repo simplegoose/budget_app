@@ -11,7 +11,7 @@
         <span class="text-2" style="font-family: cursive; font-weight: 500;">&dollar;<%= get_transaction_total(category.entities) %></span>
       </div>
       <div class="icon-text d-flex justify-content-start text-4">
-        <span class="text-4" style="font-family: cursive; font-weight: 400;"><%= category.created_at.strftime("%C") %> <%= category.created_at.strftime("%m") %> <%= category.created_at.strftime("%Y") %></span>
+        <span class="text-4" style="font-family: cursive; font-weight: 400;"><%= category.created_at.strftime("%d").to_i.ordinalize %> <%= category.created_at.strftime("%B")[0..2] %> <%= category.created_at.strftime("%Y") %></span>
       </div>
     </div>
   </div>
