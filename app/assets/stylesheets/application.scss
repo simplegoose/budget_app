@@ -1,0 +1,136 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require material_icons
+ *= require material_icons.helpers
+ *= require material_icons.outlined
+ */
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+@import 'bootstrap';
+@import './themes/colors';
+@import './themes/fonts';
+
+* {
+  font-family: 'Proxima-Light', cursive;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: $bg-color;
+}
+
+.text-1 {
+  color: $theme-text-1;
+}
+
+.text-2 {
+  color: $theme-text-2;
+}
+
+.text-3 {
+  color: $theme-text-3;
+}
+
+.text-4 {
+  color: $theme-text-4;
+}
+
+header h2 {
+  letter-spacing: 0.05rem;
+  font-family: 'Proxima-Light', cursive;
+  font-size: 1.25rem;
+}
+
+header input[type="submit"] {
+  font-family: 'Proxima-Light', serif;
+  letter-spacing: 0.1rem;
+  font-size: 1.25rem;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.bg-splash-screen {
+  background-color: $splash-bg;
+  height: 100vh;
+  width: 100vw;
+}
+
+.splash-title {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-title p {
+  font-family: 'Protest Revolution', sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+.splash-buttons .btn {
+  width: 93%;
+  margin: auto;
+}
+
+.splash-buttons .btn:first-child {
+  color: white;
+}
+
+.splash-buttons .btn:first-child:hover {
+  color: black;
+}
+
+.icon-text {
+  font-size: 0.9rem;
+}
+
+#categories a {
+  text-decoration: none;
+}
+
+.categories-wrapper {
+  max-height: 83vh;
+  height: 83vh;
+  overflow-y: scroll;
+}
+
+.transactions-wrapper {
+  max-height: 60vh;
+  overflow-y: scroll;
+}
+
+.categories-wrapper .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categories-wrapper .icon img {
+  max-height: 70px;
+}
+
+.icon-text span:nth-child(2) {
+  font-family: cursive;
+}
+
+.shadow-bottom {
+  border-bottom: 1px solid $theme-text-5;
+}

@@ -1,0 +1,10 @@
+<% if resource.errors.any? %>
+  <div class="error_explanation w-100 p-2" data-turbo-cache="false">
+    <h2 class="text-danger"> <%= pluralize(resource.errors.count, "error") %> prohibited this record from being saved: </h2>
+    <ul class="list-group list-group-flush">
+      <% resource.errors.each do |message| %>
+        <li class="list-group-item"><%= message.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

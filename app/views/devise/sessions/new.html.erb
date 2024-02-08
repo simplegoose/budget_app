@@ -1,0 +1,18 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= render "devise/shared/header", form: f %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="form-wrapper bg-white my-3">
+
+    <div class="input-group py-2">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
+    </div>
+
+    <div class="input-group py-2 flex-column">
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: 'New Password' %>
+    </div>
+
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

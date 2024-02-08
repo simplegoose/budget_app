@@ -1,0 +1,14 @@
+<div class="mx-3 py-3 shadow-bottom" id="<%= dom_id transaction %>">
+
+  <div class="icon-text d-flex flex-column justify-content-start align-items-between text-4">
+    <div class="icon-text d-flex justify-content-between text-4 mb-2">
+      <span class="text-4"><%= transaction.name %></span>
+      <span class="text-2">&dollar;<%= transaction.amount %></span>
+    </div>
+    <div class="icon-text d-flex justify-content-start text-4">
+      <%= material_icon.shape(:calendar_month).outlined.md_18.css_class('text-4') %> &nbsp;
+      <span class="text-4" style="font-family: cursive; font-weight: 400;"><%= transaction.created_at.strftime("%F") %> at <%= transaction.created_at.strftime("%H:%M") %></span>
+    </div>
+  </div>
+
+</div>

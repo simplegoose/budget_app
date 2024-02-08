@@ -78,6 +78,14 @@
 
 <!-- LIVE DEMO  -->
 
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://budget-app-zen9.onrender.com)
+
+- [Video Walkthrough](https://www.loom.com/share/9b5c96703cbc48a8a419600fe05d7a6a?sid=d7278e14-a139-4429-994b-ef4cc839d508)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -102,7 +110,7 @@ install Rails
 Clone this repository to your desired folder:
 
 ```sh
-gh git clone https://github.com/simplegoose/budget_app.git
+git clone https://github.com/simplegoose/budget_app.git
 ```
 --->
 
@@ -154,7 +162,7 @@ Example command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Comming Soon]**
+- [ ] **[Navigation Menu]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -181,7 +189,9 @@ If you like this project coomment or send it a star
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for suggesting the app
+I would like to thank Microverse for suggesting the app.
+
+I would like to thank [gregoirevella](https://www.behance.net/gregoirevella) for the design inspiration.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

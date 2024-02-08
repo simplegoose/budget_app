@@ -1,0 +1,16 @@
+<%= form_with(model: category) do |form| %>
+  <%= render "shared/forms/header", form: form %>
+  <%= render "shared/forms/error_messages", resource: category %>
+
+  <div class="form-wrapper bg-white my-3">
+
+    <div class="input-group py-2">
+      <%= form.text_field :icon, placeholder: 'Icon URL' %>
+    </div>
+
+    <div class="input-group py-2">
+      <%= form.text_field :name, placeholder: 'Category Name' %>
+    </div>
+
+  </div>
+<% end %>

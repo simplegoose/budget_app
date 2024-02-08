@@ -1,0 +1,19 @@
+<div class="card mb-3 col-11 m-auto rounded-0" id="<%= dom_id category %>">
+
+  <div class="card-body py-2 row">
+    <div class="icon col-4 px-0">
+      <%= image_tag(category.icon, :class => 'img-fluid') %>
+    </div>
+
+    <div class="icon-text col-8 d-flex flex-column justify-content-between py-1 pb-0 text-4">
+      <div class="icon-text d-flex justify-content-between text-4 mb-2">
+        <span class="text-4"><%= category.name %></span>
+        <span class="text-2" style="font-family: cursive; font-weight: 500;">&dollar;<%= get_transaction_total(category.entities) %></span>
+      </div>
+      <div class="icon-text d-flex justify-content-start text-4">
+        <span class="text-4" style="font-family: cursive; font-weight: 400;"><%= category.created_at.strftime("%d").to_i.ordinalize %> <%= category.created_at.strftime("%B")[0..2] %> <%= category.created_at.strftime("%Y") %></span>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -11,6 +11,12 @@
   </head>
 
   <body>
+    <% if notice %>
+      <p style="position: absolute; bottom: 1rem; width: 90%; left: 5%;" class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p style="position: absolute; bottom: 1rem; width: 90%; left: 5%;" class="alert alert-danger"><%= alert %></p>
+    <% end %>
     <%= yield %>
   </body>
 </html>
