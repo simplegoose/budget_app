@@ -1,0 +1,24 @@
+<nav class="navigation px-3 py-5">
+  <div class="user d-flex flex-column align-items-center">
+    <div class="avatar-wrapper rounded-circle border border-light">
+      <%= image_tag @user.photo %>
+    </div>
+    <span class="text-light mt-3"><%= @user.name %></span>
+  </div>
+  <ul class="menus px-0 mx-0 mt-4">
+    <li class="row">
+      <div class="d-flex align-items-center justify-content-center py-3 col-3">
+        <%= material_icon.shape(:manage_accounts).round.md_24.css_class('text-white') %>
+      </div>
+      <span class="py-3 text-white border-bottom col-9">Account Settings</span>
+    </li>
+    <%= link_to destroy_user_session_path, data: { "turbo-method": :delete } do %>
+      <li class="row">
+        <div class="d-flex align-items-center justify-content-center py-3 col-3">
+          <%= material_icon.shape(:logout).round.md_24.css_class('text-white') %>
+        </div>
+        <span class="py-3 text-white border-bottom col-9">Log Out</span>
+      </li>
+    <% end %>
+  </ul>
+</nav>
