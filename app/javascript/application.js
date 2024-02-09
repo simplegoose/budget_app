@@ -21,13 +21,18 @@ const toggleMenu = () => {
   if ($('.navigation').hasClass('show')) {
     $('.navigation').animate({ left: '-75vw' }).removeClass('show');
     $('body').animate({ left: '0' }).removeClass('hide');
+    $('.nav-overlay').animate({ opacity: 0 }).removeClass('show');
+    $('.menu-button').removeClass('close');
   } else {
     $('.navigation').animate({ left: '0' }).addClass('show');
     $('body').animate({ left: '75vw' }).addClass('hide');
+    $('.nav-overlay').animate({ opacity: 0.5 }).addClass('show');
+    $('.menu-button').addClass('close');
   }
 }
 document.addEventListener("turbo:load", () => {
   setInterval(hideNotice, 5000);
 
   $('.menu-button').on('click', toggleMenu);
+  $('.nav-overlay').on('click', toggleMenu);
 });

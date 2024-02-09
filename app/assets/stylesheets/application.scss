@@ -62,6 +62,18 @@ header input[type="submit"] {
   font-size: 1.25rem;
 }
 
+.menu-button .close-icon {
+  display: none;
+}
+
+.menu-button.close .close-icon {
+  display: block;
+}
+
+.menu-button.close .menu-icon {
+  display: none;
+}
+
 .text-decoration-none {
   text-decoration: none;
 }
@@ -159,7 +171,7 @@ header input[type="submit"] {
   top: 0;
   left: -75vw;
   background: linear-gradient(45deg, $gradient-1, $gradient-2);
-  z-index: 1;
+  z-index: 2;
 }
 
 .navigation.show {
@@ -171,4 +183,20 @@ body.hide {
   position: fixed;
   top: 0;
   width: 100vw;
+}
+
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  background: black;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.nav-overlay.show {
+  display: block;
+  opacity: 0.5;
 }
