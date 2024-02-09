@@ -1,13 +1,13 @@
-<header class="row bg-main px-3 py-2">
+<header class="row bg-main px-3 py-2 <%= controller_name == 'index' && 'fixed' %>">
   <div class="col-3 p-0 d-flex align-items-center justify-content-start">
     <%- if controller_name == 'categories' && controller.action_name == 'show' %>
       <%= link_to categories_path do %>
         <%= material_icon.shape(:arrow_back).outlined.md_36.css_class('text-white px-2') %>
       <% end %>
     <% else controller_name == 'entities' %>
-      <button class='menu-button btn' type="button">
+      <button class='menu-button btn p-0' type="button">
         <%= material_icon.shape(:menu).outlined.md_36.css_class('text-white px-2 menu-icon') %>
-        <%= material_icon.shape(:close).outlined.md_36.css_class('text-white px-2 close-icon') %>
+        <%= material_icon.shape(:close).outlined.md_36.css_class('text-white px-4 close-icon') %>
       </button>
     <% end %>
   </div>

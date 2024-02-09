@@ -1,9 +1,9 @@
 <nav class="navigation px-3 py-5">
   <div class="user d-flex flex-column align-items-center">
     <div class="avatar-wrapper rounded-circle border border-light">
-      <%= image_tag @user.photo %>
+      <%= image_tag current_user.photo %>
     </div>
-    <span class="text-light mt-3"><%= @user.name %></span>
+    <span class="text-light mt-3"><%= current_user.name %></span>
   </div>
   <ul class="menus px-0 mx-0 mt-4">
     <li class="row">

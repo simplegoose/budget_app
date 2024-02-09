@@ -78,6 +78,18 @@ header input[type="submit"] {
   text-decoration: none;
 }
 
+header.fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+body.hide header {
+  left: 75vw;
+  right: -50vw;
+}
+
 .bg-splash-screen {
   background-color: $splash-bg;
   height: 100vh;
