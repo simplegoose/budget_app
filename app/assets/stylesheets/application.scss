@@ -114,6 +114,10 @@ body.hide header {
   margin: auto;
 }
 
+.categories-btn-wrapper .btn {
+  width: 93%;
+}
+
 .splash-buttons .btn:first-child {
   color: white;
 }
@@ -174,10 +178,6 @@ body.hide header {
 
 .categories-btn-wrapper {
   background-color: $secondary-color;
-}
-
-.categories-btn-wrapper .btn {
-  width: 93%;
 }
 
 .shadow-bottom {
