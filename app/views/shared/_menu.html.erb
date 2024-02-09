@@ -6,6 +6,14 @@
     <span class="text-light mt-3"><%= current_user.name %></span>
   </div>
   <ul class="menus px-0 mx-0 mt-4">
+    <%= link_to categories_path do %>
+      <li class="row">
+        <div class="d-flex align-items-center justify-content-center py-3 col-3">
+          <%= material_icon.shape(:category).round.md_24.css_class('text-white') %>
+        </div>
+        <span class="py-3 text-white border-bottom col-9">Categories</span>
+      </li>
+    <% end %>
     <li class="row">
       <div class="d-flex align-items-center justify-content-center py-3 col-3">
         <%= material_icon.shape(:manage_accounts).round.md_24.css_class('text-white') %>
