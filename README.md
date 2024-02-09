@@ -11,8 +11,9 @@
 - [📖 Budget App](#about-project)
   - [🛠 Built With ](#built-with)
     - [Tech Stack ](#tech-stack)
-    - [Key Features ](#key-features-)
-  - [💻 Getting Started ](#-getting-started-)
+    - [Key Features ](#key-features)
+    - [Screenshots ](#screenshots)
+  - [💻 Getting Started ](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
@@ -72,6 +73,19 @@
 - User login and sign up
 - Introduce transactions associated with a category
 - See the money spent on each category
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Screenshots -->
+
+### Screenshots <a name="screenshots"></a>
+<div align="center">
+  <img src="./screenshots/splash-screen.png" alt="splash page" width="200px" />
+  <img src="./screenshots/categories.png" alt="categories page" width="200px" />
+  <img src="./screenshots/transactions.png" alt="transactions page" width="200px" />
+  <img src="./screenshots/menu.png" alt="active menu" width="200px" />
+</div>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
